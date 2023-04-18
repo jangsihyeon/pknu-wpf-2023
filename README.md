@@ -1,6 +1,7 @@
 # pknu-wpf-2023
-# Windows Presentation Foundation
 부경대 iot 시스템 개발자 WPF(데스크탑 앱 개발) 리포지토리 
+
+Windows Presentation Foundation
 
 
 ## 1일차 
