@@ -12,4 +12,11 @@ Windows Presentation Foundation
 ## 2일차 
 - WPF 기초
 	- 기본컨트롤
-	- 레이아웃 Grid...
+	- 레이아웃 Grid 사용 방법 
+	- BikeShop 시작
+	= WPF 만의 개발 방식
+	- 데이터 바인딩 
+	
+## 3일차 
+- WPF 기초
+	- 데이터 바인딩 계속 
