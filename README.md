@@ -27,3 +27,7 @@ Windows Presentation Foundation
 	- MahApps.Metro 디자인 적용
 	- MVVM 패턴 
 	- 데이터 바인딩 DB 연동
+
+4일차 MVVM View	
+	
+<img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf01.PNG" width="700" />
