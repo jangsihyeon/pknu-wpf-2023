@@ -31,3 +31,22 @@ Windows Presentation Foundation
 4일차 MVVM View	
 	
 <img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf01.PNG" width="700" />
+
+## 5일차 
+- WPF 응용
+	- MVVM 패턴
+	- MVVM framework / Caliburn
+	- 데이터 바인딩 DB 연동
+	
+## 6일차 
+- WPF 응용
+	- 영화 검색앱 만들기 
+		- TMDB OpenApi
+		- MahApps.Metro
+		- MahApps.Metro.IconPacks
+		- Newtonsoft.Json
+	
+6일차 영화 검색앱 PreView
+
+<img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf02.PNG" width="700" />
+	
