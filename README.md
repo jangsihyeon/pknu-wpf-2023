@@ -63,4 +63,4 @@ Windows Presentation Foundation
 	- 영화 검색앱
 		- DB 데이터 바인딩 (MySQL)
 		
-<img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf03.GIF" width="700" />
+<img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wfp03.GIF" width="700" />
