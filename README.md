@@ -65,4 +65,4 @@ Windows Presentation Foundation
 
 <최종 결과물>
 
-![최종 결과물 ](https://user-images.githubusercontent.com/123913911/234750723-7a2cb8ff-f3f5-4834-919a-53f199d30bd7.gif)>
+![wpf03](https://user-images.githubusercontent.com/123913911/234751548-022c8204-4fcf-4245-b57c-71e72cec3dd0.gif)
