@@ -62,7 +62,25 @@ Windows Presentation Foundation
 - WPF 응용
 	- 영화 검색앱
 		- DB 데이터 바인딩 (MySQL)
+	- 미세먼지 확인 앱 
+		- MahApps.Metro
+		- 데이터포털 API
+		- DB 데이터 바인딩 (MySQL)
+	
 
-<최종 결과물>
+<최종 영화 결과물>
 
 ![wpf03](https://user-images.githubusercontent.com/123913911/234751548-022c8204-4fcf-4245-b57c-71e72cec3dd0.gif)
+
+
+## 9일차 
+- WPF 응용
+	- 미세먼지 확인 앱 
+		- DB 데이터 바인딩 (MySQL)
+		- 데이터포털 API
+		- MahApps.Metro
+	- 개인 포트폴리오 
+		- 데이터 포털 API 
+		- 네이버, 카카오 API 활용
+		- 기타 open API 활용 
+		
