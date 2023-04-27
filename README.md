@@ -50,3 +50,17 @@ Windows Presentation Foundation
 
 <img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf02.PNG" width="700" />
 	
+## 7일차 
+- WPF 응용
+	- 영화 검색앱
+		- 화면 정리 
+		- CefSharp
+		- youtube api 연동 
+		- DB 연동 
+		
+## 8일차 
+- WPF 응용
+	- 영화 검색앱
+		- DB 데이터 바인딩 (MySQL)
+		
+<img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf03.GIF" width="700" />
