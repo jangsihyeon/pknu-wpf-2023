@@ -85,4 +85,5 @@ Windows Presentation Foundation
 		- 기타 open API 활용 
 
 9일차 미세먼지 확인 앱 완료 
-<img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf04.gif" width="700" />
+
+![wpf04](https://user-images.githubusercontent.com/123913911/235035455-3c281850-8561-47a2-a5e9-e28185ef8342.gif)
