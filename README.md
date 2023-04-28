@@ -83,4 +83,6 @@ Windows Presentation Foundation
 		- 데이터 포털 API 
 		- 네이버, 카카오 API 활용
 		- 기타 open API 활용 
-		
+
+9일차 미세먼지 확인 앱 완료 
+<img src="https://raw.githubusercontent.com/jangsihyeon/pknu-wpf-2023/main/imgs/wpf04.gif" width="700" />

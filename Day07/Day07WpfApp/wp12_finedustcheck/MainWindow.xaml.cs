@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using ControlzEx.Standard;
+using MahApps.Metro.Controls;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Relational;
 using Newtonsoft.Json.Linq;
@@ -76,7 +77,7 @@ namespace wp12_finedustCheck
                         dustSensors.Add(new DustSensor
                         {
                             Id = 0,
-                            Dev_id = Convert.ToString(sensor["dev_id"]),
+                            Dev_id = Convert.ToString(sensor["dev_id"]),  // 여긴 api 부분 대소문자 구분하기 때문에 잘봐 ㅜㅜ 
                             Name = Convert.ToString(sensor["name"]),
                             Loc = Convert.ToString(sensor["loc"]),
                             Coordx = Convert.ToDouble(sensor["coordx"]),
@@ -179,12 +180,69 @@ namespace wp12_finedustCheck
         // DB(MySQL)에서 조회 리스트 뿌리기
         private void CboReqDate_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if(CboReqDate.SelectedValue != null )
+            {
+                //MessageBox.Show(CboReqDate.SelectedValue.ToString());
+                using (MySqlConnection conn = new MySqlConnection(Commons.myConnString))
+                {
+                    conn.Open();
+                    var query = @"SELECT Id,
+                                                        Dev_id,
+                                                        Name,
+                                                        Loc,
+                                                        Coordx,
+                                                        Coordy,
+                                                        Ison,
+                                                        Pm10_after,
+                                                        Pm25_after,
+                                                        State,
+                                                        Timestamp,
+                                                        Company_id,
+                                                        Company_name
+                                                    FROM dustsensor
+                                                    WHERE DATE_FORMAT (Timestamp, '%Y-%m-%d') = @Timestamp";
 
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Timestamp", CboReqDate.SelectedValue.ToString());
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds, "dustsensor");
+                    List<DustSensor> dustSensors = new List<DustSensor>();
+                    foreach(DataRow row in ds.Tables["dustsensor"].Rows)
+                    {
+                        dustSensors.Add(new DustSensor
+                        {
+                            Id = 0,
+                            Dev_id = Convert.ToString(row["Dev_id"]),  // mysql은 대소문자 구분이 없어서 소문자로 해도 ㄱㅊ 근데 대문자로 해놔 
+                            Name = Convert.ToString(row["Name"]),
+                            Loc = Convert.ToString(row["Loc"]),
+                            Coordx = Convert.ToDouble(row["Coordx"]),
+                            Coordy = Convert.ToDouble(row["Coordy"]),
+                            Ison = Convert.ToBoolean(row["Ison"]),
+                            Pm10_after = Convert.ToInt32(row["Pm10_after"]),
+                            Pm25_after = Convert.ToInt32(row["Pm25_after"]),
+                            State = Convert.ToInt32(row["State"]),
+                            Timestamp = Convert.ToDateTime(row["Timestamp"]),
+                            Company_id = Convert.ToString(row["Company_id"]),
+                            Company_name = Convert.ToString(row["Company_name"])
+                        });
+                    }
+
+                    this.DataContext = dustSensors;
+                    StsResult.Content = $"DB{dustSensors.Count} 건 조회 완료 ";
+                }
+                }
+            else
+            {
+                this.DataContext = null;
+                StsResult.Content = "DB 조회 클리어 ";
+            }
         }
 
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // 콤보 박스에 들어갈 날짜를 DB에서 불러와서 
+            // 저장한 뒤에도 콤보박스를 재조회 해야 날짜 전부 출력 
             using ( MySqlConnection conn = new MySqlConnection(Commons.myConnString))
             {
                 conn.Open();
@@ -203,6 +261,16 @@ namespace wp12_finedustCheck
                 }
                 CboReqDate.ItemsSource = saveDateList;
             }
+        }
+
+        private void GrdResult_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selItem = GrdResult.SelectedItem as DustSensor;
+
+            var mapWindow = new MapWindow(selItem.Coordy, selItem.Coordx);  // 부모 위치값을 자식창으로 전달
+            mapWindow.Owner= this; // 메인 윈도우 부모 
+            mapWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner; // 부모창 중간에 출력
+            mapWindow.ShowDialog();
         }
     }
 }
