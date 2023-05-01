@@ -97,3 +97,5 @@ WPF 개인 프로젝트
 		- 부산광역시 뮤지컬 목록
 	- MahApps.Metro
 	- Newtonsoft.json
+
+![wpf_fin](https://user-images.githubusercontent.com/123913911/235408408-cfdf2635-251a-42e1-a9e0-baa692eb66b0.gif)
