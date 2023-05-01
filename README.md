@@ -98,4 +98,4 @@ WPF 개인 프로젝트
 	- MahApps.Metro
 	- Newtonsoft.json
 
-![wpf_fin](https://user-images.githubusercontent.com/123913911/235408408-cfdf2635-251a-42e1-a9e0-baa692eb66b0.gif)
+![wpf_final](https://user-images.githubusercontent.com/123913911/235408900-1e05a383-08ca-4301-815b-9fac31d0c985.gif)
