@@ -87,3 +87,13 @@ Windows Presentation Foundation
 9일차 미세먼지 확인 앱 완료 
 
 ![wpf04](https://user-images.githubusercontent.com/123913911/235035455-3c281850-8561-47a2-a5e9-e28185ef8342.gif)
+
+WPF 개인 프로젝트 
+- 부산광역시 뮤지컬 목록 조회 앱 
+	- DB 데이터 바인딩 
+		- 조회 & 삭제 
+		- 선택 날짜 뮤지컬 조회 
+	- 데이터 포털 API 
+		- 부산광역시 뮤지컬 목록
+	- MahApps.Metro
+	- Newtonsoft.json
